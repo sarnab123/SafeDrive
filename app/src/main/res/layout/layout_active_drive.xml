@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/id_activedrive_details"
+    >
+
+    <com.example.safedrive.utils.view.GothamBoldTextView
+        android:id="@+id/id_activedrive_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/active_drive_details"
+        />
+
+
+    <com.example.safedrive.utils.view.GothamBookTextView
+        android:id="@+id/id_activedrive_tripid"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/id_activedrive_header"
+        android:text="@string/trip_id"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+    <com.example.safedrive.utils.view.GothamBookTextView
+        android:id="@+id/id_activedrive_starttime"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/id_activedrive_tripid"
+        android:text="@string/trip_start_time"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+    <com.example.safedrive.utils.view.GothamBookTextView
+        android:id="@+id/id_activedrive_speed"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/id_activedrive_starttime"
+        android:text="@string/current_speed"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+    <com.example.safedrive.utils.view.GothamBookTextView
+        android:id="@+id/id_activedrive_distance"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/id_activedrive_speed"
+        android:text="@string/trip_distance"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+    <com.example.safedrive.utils.view.GothamBookTextView
+        android:id="@+id/id_activedrive_autoboolean"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/id_activedrive_distance"
+        android:text="@string/auto_tracking"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+    <com.example.safedrive.utils.view.GothamBookTextView
+        android:id="@+id/id_activedrive_sessionid"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/id_activedrive_autoboolean"
+        android:text="@string/session_id"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_buttonlist"
+        android:weightSum="2"
+        android:layout_below="@id/id_activedrive_sessionid"
+        android:orientation="horizontal">
+        <com.example.safedrive.utils.view.GothamButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_map_active"
+            android:layout_weight="1"
+            android:text="@string/active_trip_map"/>
+        <com.example.safedrive.utils.view.GothamButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/id_end_active"
+            android:text="@string/active_trip_end"/>
+    </LinearLayout>
+
+    <com.example.safedrive.utils.view.GothamBookTextView
+        android:id="@+id/id_activedrive_notstarted"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/id_buttonlist"
+        android:text="@string/no_active_trip_session"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+</RelativeLayout>

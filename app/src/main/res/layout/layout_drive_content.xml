@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_user_section"
+        android:layout_margin="10dp"
+        android:weightSum="2"
+        android:layout_below="@id/id_activedrive_sessionid"
+        android:orientation="horizontal">
+        <com.example.safedrive.utils.view.GothamMediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/id_user_id"/>
+        <com.example.safedrive.utils.view.GothamButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_sign_out"
+            android:layout_weight="1"
+            android:id="@+id/id_sign_out"
+            />
+    </LinearLayout>
+
+
+
+    <include android:id="@+id/id_active_drive_section"
+        layout="@layout/layout_active_drive"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_user_section" />
+
+
+    <include android:id="@+id/id_future_tripsection"
+        layout="@layout/layout_trip_timepicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/id_active_drive_section" />
+
+</RelativeLayout>
