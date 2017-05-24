@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="40dp"
     android:id="@+id/id_activedrive_details"
     >
 
@@ -14,6 +15,13 @@
         android:text="@string/active_drive_details"
         />
 
+    <ImageView
+        android:id="@+id/id_activedrive_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/refresh"
+        />
 
     <com.example.safedrive.utils.view.GothamBookTextView
         android:id="@+id/id_activedrive_tripid"
@@ -67,8 +75,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/id_buttonlist"
         android:weightSum="2"
+        android:id="@+id/id_activetrip_maker"
         android:layout_below="@id/id_activedrive_sessionid"
         android:orientation="horizontal">
         <com.example.safedrive.utils.view.GothamButton
@@ -88,13 +96,10 @@
     <com.example.safedrive.utils.view.GothamBookTextView
         android:id="@+id/id_activedrive_notstarted"
         android:layout_width="wrap_content"
-        android:layout_below="@id/id_buttonlist"
+        android:layout_below="@id/id_activetrip_maker"
         android:text="@string/no_active_trip_session"
         android:visibility="invisible"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         />
-
-
-
 </RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.example.safedrive.utils.view.GothamBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:id="@+id/id_trip_id"/>
+    <com.example.safedrive.utils.view.GothamMediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_trip_id"
+        android:textSize="12sp"
+        android:id="@+id/id_start_time"/>
+    <com.example.safedrive.utils.view.GothamMediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_start_time"
+        android:textSize="12sp"
+        android:id="@+id/id_end_time"/>
+    <com.example.safedrive.utils.view.GothamMediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_end_time"
+        android:textSize="12sp"
+        android:id="@+id/id_trip_distance"/>
+    <com.example.safedrive.utils.view.GothamMediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_trip_distance"
+        android:textSize="12sp"
+        android:id="@+id/id_average_speed"/>
+    <com.example.safedrive.utils.view.GothamMediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_average_speed"
+        android:textSize="12sp"
+        android:id="@+id/id_max_speed"/>
+    <com.example.safedrive.utils.view.GothamBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_max_speed"
+        android:textSize="12sp"
+        android:id="@+id/id_drivescore"/>
+</RelativeLayout>

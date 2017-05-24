@@ -3,6 +3,7 @@
 
     <string name="user_activity">All my activity</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_history">User history</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -31,11 +32,23 @@
     <string name="no_active_trip_session">No Current Active Trip/Session : </string>
     <string name="active_trip_map">Map my trip</string>
     <string name="active_trip_end">End my trip</string>
+    <string name="active_trip_start">Start my trip</string>
     <string name="active_session_end">End my session</string>
     <string name="active_session_start">Start the session</string>
-
+    <string name="drive_started">Drive has Started</string>
+    <string name="maps_not_implemented">Not implemented - Will open Maps Activity with LocationPoints from driveInfo</string>
     <!--- Strings related to future time -->
     <string name="set_future_time">Setup trip for selected time</string>
     <string name="title_activity_decision">DecisionActivity</string>
     <string name="notification_content">Time to start a trip</string>
+
+    <!--- Strings related to history -->
+    <string name="string_tripid">Trip ID : </string>
+    <string name="string_start_date">Start date and time : </string>
+    <string name="string_end_date">End date and time : </string>
+    <string name="string_average_speed">Average Speed : </string>
+    <string name="string_max_speed">Max Speed : </string>
+    <string name="string_distance">Distance Covered: </string>
+    <string name="string_driveScore">Drive Score : </string>
+    <string name="string_driveNoHistory">No trips recorded yet</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.safedrive.viewActivity;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
@@ -64,20 +65,20 @@ public class DecisionActivity extends AppCompatActivity {
     private boolean mayRequestLocation() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
-            if (checkSelfPermission(LOCATION_SERVICE) == PackageManager.PERMISSION_GRANTED) {
+            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 return true;
             }
-            if (shouldShowRequestPermissionRationale(LOCATION_SERVICE)) {
+            if (shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION)) {
                 Snackbar.make(getWindow().getDecorView().getRootView(), R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
                         .setAction(android.R.string.ok, new View.OnClickListener() {
                             @Override
                             @TargetApi(Build.VERSION_CODES.M)
                             public void onClick(View v) {
-                                requestPermissions(new String[]{LOCATION_SERVICE}, REQUEST_LOCATION_SETTINGS);
+                                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_SETTINGS);
                             }
                         });
             } else {
-                requestPermissions(new String[]{LOCATION_SERVICE}, REQUEST_LOCATION_SETTINGS);
+                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_SETTINGS);
             }
         } else {
             LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);

@@ -58,10 +58,60 @@ public class SharedPrefHelper {
         return null;
     }
 
+    public void setSessionID(String sessionID)
+    {
+        if(!TextUtils.isEmpty(sessionID))
+        {
+            SharedPreferences.Editor editor = getDefaultSharePreference().edit();
+            editor.putString(UtilityConstants.SESSION_ID, sessionID);
+            editor.apply();
+            clearTrackingID();
+        }
+    }
+
+    public String getSessionID()
+    {
+        return getDefaultSharePreference().getString(UtilityConstants.SESSION_ID, null);
+    }
+
+    public void clearSessionID()
+    {
+        SharedPreferences.Editor editor = getDefaultSharePreference().edit();
+        editor.remove(UtilityConstants.SESSION_ID);
+        editor.apply();
+    }
+
+
+    public void setTrackingID(String trackingID)
+    {
+        if(!TextUtils.isEmpty(trackingID))
+        {
+            SharedPreferences.Editor editor = getDefaultSharePreference().edit();
+            editor.putString(UtilityConstants.TRIP_ID, trackingID);
+            editor.apply();
+            clearSessionID();
+        }
+    }
+
+    public String getTrackingID()
+    {
+        return getDefaultSharePreference().getString(UtilityConstants.TRIP_ID, null);
+    }
+
+    public void clearTrackingID()
+    {
+        SharedPreferences.Editor editor = getDefaultSharePreference().edit();
+        editor.remove(UtilityConstants.TRIP_ID);
+        editor.apply();
+    }
+
+
     public void setClearLoggedState()
     {
         SharedPreferences.Editor editor = getDefaultSharePreference().edit();
         editor.remove(UtilityConstants.DRIVER_ID);
         editor.apply();
+
+        clearSessionID();
     }
 }

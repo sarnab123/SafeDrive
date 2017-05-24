@@ -31,18 +31,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".viewActivity.HistoryActivity"
+            android:label="@string/title_activity_history">
+        </activity>
 
         <service android:name="com.example.safedrivelibrary.implementation.ZenIntentService" />
 
-        <receiver android:name=".notification.NotificationReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <category android:name="android.intent.category.HOME" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="NOTIFICATION_FILTER_ONCLICK" />
-            </intent-filter>
-        </receiver>
+        <service
+            android:name=".notification.TripNotificationService"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

@@ -36,19 +36,24 @@ public class FutureDriveUIHelper
         safeDriveController = new SafeDriveController();
 
         timePicker = (TimePicker) futureView.findViewById(R.id.id_future_timepicker);
+//        timePicker.setIs24HourView(true);
         setFutureTrip = (Button) futureView.findViewById(R.id.id_setfuturetime);
 
         setFutureTrip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int hour = timePicker.getCurrentHour();
-                int minute = timePicker.getCurrentMinute();
+                if(driverPersona != null) {
+                    int hour = timePicker.getCurrentHour();
+                    int minute = timePicker.getCurrentMinute();
 
-                Calendar cal = Calendar.getInstance();
-                cal.set(Calendar.HOUR_OF_DAY, hour);
-                cal.set(Calendar.MINUTE, minute);
-                cal.set(Calendar.SECOND,0);
-                safeDriveController.setUpFutureSession(cal.getTimeInMillis(), parentActivity);
+                    Calendar cal = Calendar.getInstance();
+                    cal.set(Calendar.HOUR_OF_DAY, hour);
+                    cal.set(Calendar.MINUTE, minute);
+                    cal.set(Calendar.SECOND, 0);
+
+                    safeDriveController.setUpFutureSession(cal.getTimeInMillis(), parentActivity, System.currentTimeMillis() + driverPersona.getDriverID(), driverPersona.getDriverID());
+                }
+
             }
         });
     }
@@ -56,7 +61,7 @@ public class FutureDriveUIHelper
     public void updateUIWithModel(@Nullable ActiveDriveModel activeDriveModel , @NonNull DriverPersona driverPersona)
     {
 
-
+        this.driverPersona = driverPersona;
 
     }
 }

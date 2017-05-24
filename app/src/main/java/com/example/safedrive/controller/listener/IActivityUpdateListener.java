@@ -9,4 +9,5 @@ import com.example.safedrivelibrary.models.DriverPersona;
 public interface IActivityUpdateListener
 {
     public void updateUIonEvent(DriverPersona driverPersona);
+    public void handleLocationSettings();
 }
